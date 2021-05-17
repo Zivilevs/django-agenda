@@ -20,7 +20,7 @@ class Evento(models.Model):  # nome da tabela vai ser core_evento, core e nome d
         return self.data_evento.strftime('%d/%m/%Y %H:%M Hrs')
 
     def get_data_input_evento(self):
-        return self.data_evento.strftime('%Y-%m-%d %H:%M')  # NAO FUNCIONA
+        return self.data_evento.strftime(':%Y-%m-%d %H:%M')  # NAO FUNCIONA
 
     def get_evento_atrasado(self):
         if self.data_evento < datetime.now():
